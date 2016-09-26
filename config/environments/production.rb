@@ -83,4 +83,12 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+
+
+  #[Jerry] add for email authenticatable
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { :host => 'photo-app-jerry04.herokuapp.com', :protocol => 'https'}
+
+
 end
