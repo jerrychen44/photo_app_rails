@@ -10,9 +10,9 @@
     <h4><%= t('.sign_up', :default => "Sign up") %></h4>
   </div>
   <div class="panel-body">
-    <!--<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { role: "form" }) do |f| %>-->
+    <!--<%#= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { role: "form" }) do |f| %>-->
     <!--add class cc_form for stripe-->
-    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { role: "form", class: 'cc_form'  }) do |f| %>
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { role: "form", class: 'cc_form' }) do |f| %>
       <div class="form-group">
         <%= f.label :email %>
         <%= f.email_field :email, autofocus: true, class: "form-control" %>
@@ -25,8 +25,9 @@
         <%= f.label :password_confirmation %>
         <%= f.password_field :password_confirmation, class: "form-control" %>
       </div>
-      <!--[Jerry] START we add the credit card info-->
 
+
+      <!--[Jerry] START we add the credit card info-->
       <%= fields_for( :payment ) do |p| %>
 
         <div class="row col-md-12">
@@ -64,11 +65,6 @@
 
       <% end %>
       <!--[Jerry] END we add the credit card info-->
-
-
-
-
-
 
       <%= f.submit t('.sign_up', :default => "Sign up"), class: "btn btn-primary" %>
     <% end %>

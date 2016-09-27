@@ -13,5 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require turbolinks
+//[Jerry] remove the turbolinks because the first payment will attempt at sign-up fails but the second attempt succeeds
+// require turbolinks
 //= require_tree .
