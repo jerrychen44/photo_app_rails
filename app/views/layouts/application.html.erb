@@ -57,6 +57,7 @@
             <% if current_user %>
               <!--the class user-name we will made later.-->
               <li class="col-md-8 user-name">
+                <!--we wnat use a fa icon here-->
                 <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.email, length: 25)).html_safe,
                                                             edit_user_registration_path, title: 'Edit Profile' %>
               </li>
