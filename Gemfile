@@ -15,14 +15,19 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-#[Jerry] install for authentication
+#[Jerry] START
+#install for authentication
 #check here https://github.com/plataformatec/devise/wiki/How-To:-Add-:confirmable-to-Users
 gem 'devise'
 gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
+###
+#add for stripe, online payment
+#ref https://stripe.com/docs/checkout/rails
+gem 'stripe'
 
 
-
+#[Jerry] END
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
