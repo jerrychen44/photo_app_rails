@@ -8,4 +8,6 @@ class User < ApplicationRecord
   #when user sign up, not only hit the user db, will also hit the payment db because their paid.
   has_one :payment
   accepts_nested_attributes_for :payment
+  #[Jerry] set the relation of image
+  has_many :images
 end

@@ -26,6 +26,10 @@ gem 'devise-bootstrap-views'
 #ref https://stripe.com/docs/checkout/rails
 gem 'stripe'
 
+#for image upload
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
 
 #[Jerry] END
 
