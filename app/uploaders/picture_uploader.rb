@@ -1,6 +1,11 @@
 # encoding: utf-8
 
 class PictureUploader < CarrierWave::Uploader::Base
+  #[Jerry] We need some pagefrom outside
+  #we will only display the image size in 300x300
+  include CarrierWave::MiniMagick
+  process resize_to_limit: [300, 300]
+
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
@@ -44,8 +49,10 @@ class PictureUploader < CarrierWave::Uploader::Base
 
   # Override the filename of the uploaded files:
   # Avoid using model.id or version_name here, see uploader/store.rb for details.
-  # def filename
-  #   "something.jpg" if original_filename
-  # end
+  #[Jerry] uncomment it.
+  def filename
+    #{}"something.jpg" if original_filename
+    %w(jpg jpeg gif png)
+  end
 
 end
